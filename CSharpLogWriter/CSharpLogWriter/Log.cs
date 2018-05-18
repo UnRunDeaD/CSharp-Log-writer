@@ -26,7 +26,7 @@ namespace CSharpLogWriter
             return LogFile;
         }
 
-        public static void Developer(string function, string LogMessage, int level)
+        public static void Developer(string function, string LogMessage, string level)
         {
             try
             {
@@ -36,7 +36,7 @@ namespace CSharpLogWriter
 
                 switch (level)
                 {
-                    case 0:
+                    case "important":
                         {
                             using (StreamWriter sw = File.AppendText(path))
                                 Write("ENTRY", function, LogMessage, sw);
@@ -119,7 +119,7 @@ namespace CSharpLogWriter
             }
             catch (Exception exc)
             {
-
+                
             }
         }
     }

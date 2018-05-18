@@ -10,6 +10,11 @@ namespace CSharpLogWriter
     {
         static void Main(string[] args)
         {
+            Log.Developer(function: "YourFunction", "Your Log Message or Exception", level: "important");
+
+            Log.Error(function: "YourFunction", "Your Log Message or Exception", level: "priority");
+
+            Log.Successful(function: "YourFunction", "Your Log Message or Action ", level: "SuccessfulAction");
         }
     }
 }
